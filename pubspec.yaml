@@ -60,6 +60,9 @@ dependencies:
   # Media Service
   image_picker: ^0.8.6
 
+  # speech recognition service
+  flutter_speech: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
