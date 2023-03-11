@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/services.dart';
 import 'package:kyo_challenge/app/app.locator.dart';
 import 'package:kyo_challenge/app/app.router.dart';
+import 'package:kyo_challenge/constants.dart';
+import 'package:kyo_challenge/setup_dialogui.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() async {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: kMainColor,
+  ));
+
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   setupLocator();
+  setupDialogUi();
 
   runApp(
     EasyLocalization(
